@@ -68,10 +68,10 @@ class Destination {
 }
 
 const List<Destination> allDestinations = <Destination>[
-  Destination('Home', Icons.home, Colors.teal),
-  Destination('Business', Icons.business, Colors.cyan),
-  Destination('School', Icons.school, Colors.orange),
-  Destination('Flight', Icons.flight, Colors.blue)
+  Destination('Accueil', Icons.home, Colors.teal),
+  Destination('Favoris', Icons.stars, Colors.amber),
+  Destination('Info sur BA', Icons.info, Colors.grey),
+  Destination('Mon compte', Icons.supervised_user_circle, Colors.blue)
 ];
 
 

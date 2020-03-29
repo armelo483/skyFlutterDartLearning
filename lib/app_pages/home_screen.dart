@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutterapp_learn/app_pages/bonnet_screen.dart';
+import 'package:flutterapp_learn/block_templates/carousel.dart';
+
 
 class HomePage extends StatelessWidget{
   @override
@@ -7,7 +9,7 @@ class HomePage extends StatelessWidget{
     // TODO: implement build
     return Material(
       color: Colors.black12 ,
-      child: ListView(
+      child:ListView(
         padding: const EdgeInsets.all(2),
         children: <Widget>[
           SizedBox(
@@ -28,142 +30,146 @@ class HomePage extends StatelessWidget{
                 borderRadius: BorderRadius.circular(2),
               ),
               child:SingleChildScrollView(
-                scrollDirection: Axis.horizontal,
-                child:Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  mainAxisSize: MainAxisSize.min,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: <Widget>[
-                    Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: <Widget>[
-                          GestureDetector(
-                              onTap: (){
-                                Navigator.of(context).push(_createRoute());
-                              },
-                      child:Container(
-                      height: 80.0,
-                      width: 80.0,
-                      margin: EdgeInsets.only(left: 7),
-                      decoration: new BoxDecoration(
-                        image: DecorationImage(
-                          image: new AssetImage(
-                              'images/echarpe.jpg'),
-                          fit: BoxFit.fill,
+                  scrollDirection: Axis.horizontal,
+                  child:Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      mainAxisSize: MainAxisSize.min,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: <Widget>[
+                        Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: <Widget>[
+                              GestureDetector(
+                                  onTap: (){
+                                    Navigator.of(context).push(_createRoute());
+                                  },
+                                  child:Container(
+                                    height: 80.0,
+                                    width: 80.0,
+                                    margin: EdgeInsets.only(left: 7),
+                                    decoration: new BoxDecoration(
+                                      image: DecorationImage(
+                                        image: new AssetImage(
+                                            'images/echarpe.jpg'),
+                                        fit: BoxFit.fill,
+                                      ),
+                                      shape: BoxShape.circle,
+                                    ),
+                                  )),
+                              Padding(
+                                  padding: EdgeInsets.only(left: 7),
+                                  child: Text('Echarpe', style: TextStyle(fontSize: 18))
+                              ),
+                            ]
                         ),
-                        shape: BoxShape.circle,
-                      ),
-                    )),
-                          Padding(
-                              padding: EdgeInsets.only(left: 7),
-                              child: Text('Echarpe', style: TextStyle(fontSize: 18))
-                          ),
-                        ]
-                    ),
-                    Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: <Widget>[
-                          Container(
-                            height: 80.0,
-                            width: 80.0,
-                            margin: EdgeInsets.only(left: 35),
-                            decoration: new BoxDecoration(
-                              image: DecorationImage(
-                                image: new AssetImage(
-                                    'images/casquette22.jpg'),
-                                fit: BoxFit.fill,
+                        Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: <Widget>[
+                              Container(
+                                height: 80.0,
+                                width: 80.0,
+                                margin: EdgeInsets.only(left: 35),
+                                decoration: new BoxDecoration(
+                                  image: DecorationImage(
+                                    image: new AssetImage(
+                                        'images/casquette22.jpg'),
+                                    fit: BoxFit.fill,
+                                  ),
+                                  shape: BoxShape.circle,
+                                ),
                               ),
-                              shape: BoxShape.circle,
-                            ),
-                          ),
-                          Padding(
-                              padding: EdgeInsets.only(left: 35),
-                              child: Text('Casque', style: TextStyle(fontSize: 18))
-                          ),
-                        ]
-                    ),
-                    Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: <Widget>[
-                      Container(
-                        height: 80.0,
-                        width: 80.0,
-                        margin: EdgeInsets.only(left: 35),
-                        decoration: new BoxDecoration(
-                          image: DecorationImage(
-                            image: new AssetImage(
-                                'images/bonnet.jpg'),
-                            fit: BoxFit.fill,
-                          ),
-                          shape: BoxShape.circle,
+                              Padding(
+                                  padding: EdgeInsets.only(left: 35),
+                                  child: Text('Casque', style: TextStyle(fontSize: 18))
+                              ),
+                            ]
                         ),
-                      ),
-
-                          Padding(
-                              padding: EdgeInsets.only(left: 35),
-                              child: Text('Bonnet', style: TextStyle(fontSize: 18))
-                          ),
-                        ]
-                    ),
-                    Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: <Widget>[
-                          Container(
-                            height: 80.0,
-                            width: 80.0,
-                            margin: EdgeInsets.only(left: 35),
-                            decoration: new BoxDecoration(
-                              image: DecorationImage(
-                                image: new AssetImage(
-                                    'images/chapeau.jpg'),
-                                fit: BoxFit.fill,
+                        Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: <Widget>[
+                              Container(
+                                height: 80.0,
+                                width: 80.0,
+                                margin: EdgeInsets.only(left: 35),
+                                decoration: new BoxDecoration(
+                                  image: DecorationImage(
+                                    image: new AssetImage(
+                                        'images/bonnet.jpg'),
+                                    fit: BoxFit.fill,
+                                  ),
+                                  shape: BoxShape.circle,
+                                ),
                               ),
-                              shape: BoxShape.circle,
-                            ),
-                          ),
 
-                          Padding(
-                              padding: EdgeInsets.only(left: 35),
-                              child: Text('Chapeau', style: TextStyle(fontSize: 18))
-                          ),
-                        ]
-                    ),
-                    Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: <Widget>[
-                          Container(
-                            height: 80.0,
-                            width: 80.0,
-                            margin: EdgeInsets.only(left: 35),
-                            decoration: new BoxDecoration(
-                              image: DecorationImage(
-                                image: new AssetImage(
-                                    'images/tshirt.jpg'),
-                                fit: BoxFit.fill,
+                              Padding(
+                                  padding: EdgeInsets.only(left: 35),
+                                  child: Text('Bonnet', style: TextStyle(fontSize: 18))
                               ),
-                              shape: BoxShape.circle,
-                            ),
-                          ),
+                            ]
+                        ),
+                        Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: <Widget>[
+                              Container(
+                                height: 80.0,
+                                width: 80.0,
+                                margin: EdgeInsets.only(left: 35),
+                                decoration: new BoxDecoration(
+                                  image: DecorationImage(
+                                    image: new AssetImage(
+                                        'images/chapeau.jpg'),
+                                    fit: BoxFit.fill,
+                                  ),
+                                  shape: BoxShape.circle,
+                                ),
+                              ),
 
-                          Padding(
-                              padding: EdgeInsets.only(left: 35),
-                              child: Text('T-shirt', style: TextStyle(fontSize: 18))
-                          ),
-                        ]
-                    ),
+                              Padding(
+                                  padding: EdgeInsets.only(left: 35),
+                                  child: Text('Chapeau', style: TextStyle(fontSize: 18))
+                              ),
+                            ]
+                        ),
+                        Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: <Widget>[
+                              Container(
+                                height: 80.0,
+                                width: 80.0,
+                                margin: EdgeInsets.only(left: 35),
+                                decoration: new BoxDecoration(
+                                  image: DecorationImage(
+                                    image: new AssetImage(
+                                        'images/tshirt.jpg'),
+                                    fit: BoxFit.fill,
+                                  ),
+                                  shape: BoxShape.circle,
+                                ),
+                              ),
 
-                  ]
-              )
+                              Padding(
+                                  padding: EdgeInsets.only(left: 35),
+                                  child: Text('T-shirt', style: TextStyle(fontSize: 18))
+                              ),
+                            ]
+                        ),
+
+                      ]
+                  )
+              ),
+            ),
           ),
-          ),
-      ),
           SizedBox(
             width: double.infinity,
             height: 300.0,
             child: Container(
+              child: Center(
+                child: Carousel(),
+              ),
               margin: EdgeInsets.all(2),
+              padding: EdgeInsets.only(top: 37),
               decoration: BoxDecoration(
-                color: const Color(0xff7c94b6),
+                //color: const Color(0xff7c94b6),
                 border: Border.all(
                   color: Colors.white,
                   width: 2,
@@ -192,8 +198,8 @@ class HomePage extends StatelessWidget{
               ),
             ),
           )
-    ],
-  )
+        ],
+      )
       /*child: SingleChildScrollView(
         scrollDirection: Axis.horizontal,
           child:Row(
@@ -224,9 +230,9 @@ Route _createRoute() {
   return PageRouteBuilder(
     pageBuilder: (context, animation, secondaryAnimation) => BonnetPage(),
     transitionsBuilder: (context, animation, secondaryAnimation, child) {
-      var begin = Offset(0.0, 0.3);
+      var begin = Offset(0.0, 0.1);
       var end = Offset.zero;
-      var curve = Curves.easeInOut;
+      var curve = Curves.easeIn;
 
       var tween = Tween(begin: begin, end: end).chain(CurveTween(curve: curve));
 

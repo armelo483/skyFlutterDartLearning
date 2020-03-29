@@ -9,7 +9,7 @@ class BonnetPage extends StatelessWidget{
             children: <Widget>[
               Container(color: Colors.black26, height: 5.0,)]),
             preferredSize: Size.fromHeight(10.0)),
-        title: Text('Bonnetss'),
+        title: Text('Bonnets'),
         backgroundColor: Colors.grey,
         elevation: 23,),
       body: Center(
